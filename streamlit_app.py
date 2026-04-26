@@ -5,8 +5,8 @@ import re
 import string
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-# Load model
-model = tf.keras.models.load_model("sentiment_model.h5")
+from keras.models import load_model
+model = load_model("sentiment_model.h5")
 
 # Load tokenizer
 with open("tokenizer.pkl", "rb") as f:
